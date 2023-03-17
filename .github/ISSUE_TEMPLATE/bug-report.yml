@@ -10,37 +10,29 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: Platforms affected
+      label: Flavours affected
       options:
-        - label: Azure DevOps
-        - label: GitHub Actions - Standard Runners
-        - label: GitHub Actions - Larger Runners
+        - label: Steam
+        - label: GOG
+        - label: Vanilla
   - type: checkboxes
     attributes:
-      label: Runner images affected
+      label: Operating System
       options:
-        - label: Ubuntu 18.04
-        - label: Ubuntu 20.04
-        - label: Ubuntu 22.04
-        - label: macOS 11
-        - label: macOS 12
-        - label: Windows Server 2019
-        - label: Windows Server 2022
+        - label: Mac OS X
+        - label: Windows
+        - label: Linux
   - type: textarea
     attributes:
-      label: Image version and build link
+      label: Version
       description: |
-        Image version where you are experiencing the issue. Where to find image version in build logs:
-        1. For GitHub Actions, under "Set up job" -> "Runner Image" -> "Version".
-        2. For Azure DevOps, under "Initialize job" -> "Runner Image" -> "Version".
-
-        If you have a public example, please, provide a link to the failed build.
+        Version where you are experiencing the issue. Find the version in the bottom right corner on the main menu screen.
     validations:
       required: true
   - type: input
     attributes:
-      label: Is it regression?
-      description: If yes, please, provide the latest image version where the issue didn't persist, and a link to the latest successful build.
+      label: Is it something that used to work before?
+      description: If yes, please provide the most recent version where it used to work.
     validations:
         required: true
   - type: textarea
