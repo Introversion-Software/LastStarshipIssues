@@ -5,3 +5,8 @@ Steam:
 'os:macosx':
     - '(\[x\] Mac OS X)'
 
+Alpha 2:
+   - '(Alpha 2)'
+
+Alpha 1:
+   - '(Alpha 1)'
