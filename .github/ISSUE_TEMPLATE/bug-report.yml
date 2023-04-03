@@ -22,11 +22,14 @@ body:
         - label: Mac OS X
         - label: Windows
         - label: Linux
-  - type: textarea
+  - type: dropdown
+    id: version
     attributes:
       label: Version
-      description: |
-        Version where you are experiencing the issue. Find the version in the bottom right corner on the main menu screen.
+      description: Which version did you experience the bug? (can be found in the bottom-left of the screen)
+      options:
+        - Alpha 2
+        - Alpha 1
     validations:
       required: true
   - type: input
