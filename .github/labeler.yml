@@ -1,6 +1,0 @@
-# Add/remove 'critical' label if issue contains the words 'urgent' or 'critical'
-Steam:
-   - '(Steam)'
-
-'os:macosx':
-    - '(\[x\] Mac OS X)'

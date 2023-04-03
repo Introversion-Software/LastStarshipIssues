@@ -4,7 +4,7 @@ on:
     types: [opened, edited]
 
 jobs:
-  version-labeler:
+  auto-labeler:
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -18,6 +18,26 @@ jobs:
         with:
           template-path: .github/ISSUE_TEMPLATE/bug-report.yml
 
+      - name: Set labels based on flavour field
+        uses: redhat-plumbers-in-action/advanced-issue-labeler@v2.0.4
+        with:
+          issue-form: ${{ steps.issue-parser.outputs.jsonString }}
+          section: flavour
+          # it says block-list is optional, but it gives a minLength error without it
+          block-list: |
+            None
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set labels based on OS field
+        uses: redhat-plumbers-in-action/advanced-issue-labeler@v2.0.4
+        with:
+          issue-form: ${{ steps.issue-parser.outputs.jsonString }}
+          section: os
+          # it says block-list is optional, but it gives a minLength error without it
+          block-list: |
+            None
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Set labels based on version field
         uses: redhat-plumbers-in-action/advanced-issue-labeler@v2.0.4
         with:
@@ -27,13 +47,3 @@ jobs:
           block-list: |
             None
           token: ${{ secrets.GITHUB_TOKEN }}
-
-  triage:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: github/issue-labeler@v3.0 #May not be the latest version
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: .github/labeler.yml
-        not-before: 2020-01-15T02:54:32Z
-        enable-versioned-regex: 0

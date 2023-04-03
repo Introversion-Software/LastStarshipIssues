@@ -1,6 +1,6 @@
 name: Bug Report
 description: Submit a bug report.
-labels: [bug report, needs triage]
+labels: bug
 body:
   - type: textarea
     attributes:
@@ -8,20 +8,26 @@ body:
       description: A clear and concise description of what the bug is, and why you consider it to be a bug.
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
+    id: flavour
     attributes:
-      label: Flavours affected
+      label: Flavour affected
       options:
-        - label: Steam
-        - label: GOG
-        - label: Vanilla
-  - type: checkboxes
+        - Steam
+        - GOG
+        - Vanilla
+    validations:
+      required: true
+  - type: dropdown
+    id: os
     attributes:
       label: Operating System
       options:
-        - label: Mac OS X
-        - label: Windows
-        - label: Linux
+        - Mac OS X
+        - Windows
+        - Linux
+    validations:
+      required: true
   - type: dropdown
     id: version
     attributes:
