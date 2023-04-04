@@ -23,8 +23,8 @@ body:
     attributes:
       label: Operating System
       options:
-        - Mac OS X
         - Windows
+        - Mac OS X
         - Linux
     validations:
       required: true
