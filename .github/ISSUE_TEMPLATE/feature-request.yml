@@ -6,5 +6,5 @@ body:
     attributes:
       label: Description
       description: A description of what you would like to see added to the game
-      validations:
-        required: true
+    validations:
+      required: true
