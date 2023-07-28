@@ -1,0 +1,10 @@
+name: Feature Request
+description: Submit a feature you'd like to see in the game
+labels: feature request
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: A description of what you would like to see added to the game
+      validations:
+        required: true
