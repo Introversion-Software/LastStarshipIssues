@@ -34,6 +34,7 @@ body:
       label: Version
       description: Which version did you experience the bug? (can be found in the bottom-left of the screen)
       options:
+        - Alpha 9
         - Alpha 8
         - Alpha 7
         - Alpha 6
