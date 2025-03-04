@@ -1,0 +1,55 @@
+name: Localisation Feedback
+description: Let us know about a translation or localisation issue.
+labels: localisation
+body:
+  - type: dropdown
+    attributes:
+      label: Language affected
+      options:
+        - German
+        - French
+        - Spanish
+        - English
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Type of issue
+      options:
+        - Incorrect/Missing translation
+        - Punctuation, spelling, or grammar
+        - Suggestion
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: Which version are you running? (can be found in the bottom-left of the screen)
+      options:
+        - Alpha 14
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: What is the language key, if known?
+      description: This is the text identifier in the language files, not the translation itself.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: What is the current translation?
+      description: If the mistake is within a body of text, please include the entire text. Screenshots can also be put here.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What is your preferred translation?
+      description: If your suggested change is within a body of text, please provide the entire body of text.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Please explain the issue or problem with the original text, if applicable.
+    validations:
+      required: true
