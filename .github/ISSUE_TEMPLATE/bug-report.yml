@@ -25,6 +25,7 @@ body:
       options:
         - Windows
         - Mac OS X
+        - Steam Deck
         - Linux
     validations:
       required: true
@@ -34,22 +35,12 @@ body:
       label: Version
       description: Which version did you experience the bug? (can be found in the bottom-left of the screen)
       options:
+        - Alpha 17
         - Alpha 16
         - Alpha 15
         - Alpha 14
         - Alpha 13
-        - Alpha 12
-        - Alpha 11
-        - Alpha 10
-        - Alpha 9
-        - Alpha 8
-        - Alpha 7
-        - Alpha 6
-        - Alpha 5
-        - Alpha 4
-        - Alpha 3
-        - Alpha 2
-        - Alpha 1
+        - Previous Alphas
     validations:
       required: true
   - type: input
