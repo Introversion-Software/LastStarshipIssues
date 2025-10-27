@@ -6,10 +6,23 @@ body:
     attributes:
       label: Language affected
       options:
-        - German
-        - French
-        - Spanish
+        - Chinese (Simplified)
+        - Chinese (Traditional)
+        - Dutch
         - English
+        - French
+        - German              
+        - Italian
+        - Korean
+        - Norwegian           
+        - Polish
+        - Portuguese (Brazil)
+        - Russian
+        - Spanish
+        - Swedish
+        - tokipona
+        - Turkish
+        - Japanese
     validations:
       required: true
   - type: dropdown
