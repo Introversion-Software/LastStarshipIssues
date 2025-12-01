@@ -35,11 +35,11 @@ body:
       label: Version
       description: Which version did you experience the bug? (can be found in the bottom-left of the screen)
       options:
+        - Update 19
         - Update 18
         - Alpha 17
         - Alpha 16
         - Alpha 15
-        - Alpha 14
         - Previous Alphas
     validations:
       required: true
