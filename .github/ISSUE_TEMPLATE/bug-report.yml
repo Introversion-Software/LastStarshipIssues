@@ -35,11 +35,11 @@ body:
       label: Version
       description: Which version did you experience the bug? (can be found in the bottom-left of the screen)
       options:
+        - Update 24
         - Update 23
         - Version 1
         - Update 21
         - Update 20
-        - Update 19
         - Previous Versions
     validations:
       required: true
